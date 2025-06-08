@@ -36,21 +36,44 @@ Figure 02  Encoder 8 * 3
 
 **Procedure**
 
-/* write all the steps invloved */
+step1: Define the Module and Ports – Create a Verilog module with an 8-bit input and a 3-bit output.
+
+step2: Implement Dataflow Logic – Use continuous assign statements to encode the highest-priority bit into a 3-bit output.
+
+step3: Create the Testbench – Write a testbench to apply different input values and observe outputs.
+
+step4: Simulate the Design – Run the simulation in a Verilog simulator like ModelSim or Vivado.
+
+step5: Verify with the Functional Table – Compare the output values against the expected functional table.
+
+step6: Validate the Results – Ensure the simulation matches the expected results and fix any errors.
 
 **PROGRAM**
 
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by: 212224230118
 */
+```hdl
+module ex5(din,a,b,c);
+input [0:7] din;
+output a,b,c;
+assign a=(din[4]|din[5]|din[6]|din[7]);
+assign b=(din[2]|din[3]|din[6]|din[7]);
+assign c=(din[1]|din[3]|din[5]|din[7]);
+endmodule
+```
+## RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling
 
-**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+![Screenshot 2025-03-28 134731](https://github.com/user-attachments/assets/fe489d26-e4f7-47e4-a779-7716c73f523f)
 
-**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
+## TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling
+
+![Screenshot 2025-04-11 133711](https://github.com/user-attachments/assets/89f4f227-0551-472b-a656-4f53b7bd7fb7)
 
 **RESULTS**
 
+A designed  a half adder and half subtractor circuit and verified its truth table in Quartus using Verilog programming.
 
 
 
